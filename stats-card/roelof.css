@@ -1,0 +1,179 @@
+:root {
+  --dark_blue : hsl(233, 47%, 7%);                   /*(main background)*/
+  --desaturated_blue: hsl(244, 38%, 16%);            /*(card background)*/
+  --violet: hsl(277, 64%, 61%);                      /*(accent)*/
+  --white: hsl(0, 0%, 100%);                         /*(main heading, stats + [Inter])*/
+  --transparent-white-main: hsla(0, 0%, 100%, 0.75); /*(main paragraph) + [Inter]*/
+  --transparent-white-stat: hsla(0, 0%, 100%, 0.6);  /*(stat paragraph) + [Inter].    Bij DESKTOP : [Lexend Deca] !!! */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/*--------- MOBILE FIRST ---------*/
+
+body{
+    font-size: 15px;
+    font-family: Inter;
+    background-color: var(--dark_blue);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    width: 320px;
+    background-color: var(--desaturated_blue);
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 375px;
+
+}
+
+.image {
+    width: 345px;
+    height: 253px;
+    background-color: var(--violet);
+    object-fit: cover;
+}
+
+
+.image img {
+    width: 345px;
+    height: 253px;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+    object-fit: cover;
+}
+
+.text {
+    width: 345px;
+    padding: 30px;
+    text-align : center; 
+}
+
+.header p{
+    color: var(--transparent-white-main);
+    padding: 20px 10px;
+    line-height: 1.5; 
+}
+
+.accent {
+    color: var(--violet);
+}
+
+.stats {
+    padding: 20px;
+    color: var(--white);
+    font-family: 'Inter';
+    font-weight: 400;  
+}
+
+.stats p{
+    text-transform: uppercase;
+    color: var(--transparent-white-stat);
+    font-size: 13.65px;
+    font-size: 400;
+    padding-top: 0px;
+}
+
+.companies{
+    padding-bottom: 20px;
+
+}
+
+.templates{
+    padding-bottom: 20px;
+
+}
+
+/*--------- DESKTOP ---------*/
+
+@media (min-width: 1150px){
+
+    h1{
+        text-align: left;
+        padding-right: 50px;
+
+    }
+
+   .container {
+        width: 1080px;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-direction: row-reverse; 
+
+    }
+
+    .text{
+        width: 540px;
+        text-align: left;
+        padding-top: 70px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .image{
+        width: 540px;
+    }
+
+    .header p{
+        padding-left: 0px; 
+        padding-top: 30px;
+    
+    }
+
+    .stats{
+        display: flex; 
+        flex-direction: row;
+        padding-left: 0px;
+        padding-right: 75px;
+    
+    }
+
+    .stats h1{
+       padding-top: 45px;
+    }
+
+    .text p{
+        font-family: 'Lexend Deca', sans-serif;
+        padding-right: 20px;
+    }
+
+    .stats p{
+        padding-right: 25px;
+    }
+
+    .image {
+        width: 540px;
+        height: 446px;
+    }
+    
+    
+    .image img {
+        width: 540px;
+        height: 540px;
+    }
+}
+
+
+
+
+
